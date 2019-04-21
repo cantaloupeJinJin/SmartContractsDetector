@@ -1,0 +1,22 @@
+pragma solidity ^0.4.25;
+
+contract Crowdsale {
+
+    address public owner;
+
+    uint rate;
+    uint cap;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function setRate(_rate) public onlyOwner {
+        rate = _rate;
+    }
+
+    function setCap(_cap) public {
+        require (msg.sender == owner);
+        cap = _cap;
+    }
+}
