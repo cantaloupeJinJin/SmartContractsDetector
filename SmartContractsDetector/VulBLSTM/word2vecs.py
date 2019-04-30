@@ -19,7 +19,7 @@ sentences = word2vec.LineSentence("rawData/wordEmbdiing.txt")
 #model = gensim.models.Word2Vec(sentences, size=200, sg=1, iter=8)
 model = gensim.models.Word2Vec(sentences,size = 200,sg=1, iter=8)
 model.wv.save_word2vec_format("rawData/word2Vec" + ".bin", binary=True)
-model.wv.save_word2vec_format("rawData/word2Vec" + ".vector", binary=False)
+#model.wv.save_word2vec_format("rawData/word2Vec" + ".vector", binary=False)
 
 # 加载bin格式的模型
 #wordVec = gensim.models.KeyedVectors.load_word2vec_format("word2Vec.bin", binary=True)

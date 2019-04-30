@@ -11,7 +11,7 @@ import time
 import datetime
 import random
 import json
-
+import keras
 import warnings
 from collections import Counter
 from math import sqrt
@@ -28,8 +28,9 @@ warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 # 配置参数
 
 class TrainingConfig(object):
-    epoches = 25
+    epoches = 1
     evaluateEvery = 1
+
     checkpointEvery = 100
     #learningRate = 0.001
     learningRate = 0.001
@@ -45,12 +46,13 @@ class ModelConfig(object):
 
 
 class Config(object):
-    sequenceLength = 600  # 取了所有序列长度的均值
+    sequenceLength = 900  # 取了所有序列长度的均值
     #batchSize = 128
-    batchSize = 128
-
+    batchSize = 32
+    #测试集代码条数
+    testSize = 50
     dataSource = "preprocess/labeledTrain.csv"
-
+    testSource = "preprocess/test1.csv"
     stopWordSource = "rawData/english"
 
     numClasses = 2
@@ -71,6 +73,8 @@ config = Config()
 class Dataset(object):
     def __init__(self, config):
         self._dataSource = config.dataSource
+        #用于模型预测
+        self._testSource = config.testSource
         self._stopWordSource = config.stopWordSource
 
         self._sequenceLength = config.sequenceLength  # 每条输入的序列处理为定长
@@ -225,11 +229,15 @@ class Dataset(object):
         # 初始化数据集
         reviews, labels = self._readData(self._dataSource)
 
+        reviews1, labels1 = self._readData(self._testSource)
+
         # 初始化词汇-索引映射表和词向量矩阵
         self._genVocabulary(reviews)
+        #self._genVocabulary(reviews1)
 
         # 初始化训练集和测试集
         trainReviews, trainLabels, evalReviews, evalLabels = self._genTrainEvalData(reviews, labels, self._rate)
+        trainReviews1, trainLabels1, evalReviews1, evalLabels1 = self._genTrainEvalData(reviews1, labels1, 1)
         self.trainReviews = trainReviews
         self.trainLabels = trainLabels
 
@@ -237,8 +245,9 @@ class Dataset(object):
         self.evalLabels = evalLabels
 
         # inference data { data label}
-        self.inferenceReviews = trainReviews
-        self.inferenceLabels = trainLabels
+
+        self.inferenceReviews = trainReviews1
+        self.inferenceLabels = trainLabels1
 
 data = Dataset(config)
 data.dataGen()
@@ -257,7 +266,7 @@ def nextBatch(x, y, batchSize):
     y = y[perm]
 
     numBatches = len(x) // batchSize
-
+    print("random,len(x), numBatches: ", len(x), numBatches)
     for i in range(numBatches):
         start = i * batchSize
         end = start + batchSize
@@ -266,7 +275,25 @@ def nextBatch(x, y, batchSize):
 
         yield batchX, batchY
 
+def norandomnextBatch(x, y, batchSize):
+    """
+    生成batch数据集，用生成器的方式输出
+    """
 
+    perm = np.arange(len(x))
+    x = x[perm]
+    y = y[perm]
+
+    numBatches = len(x) // batchSize
+    print("len(x), numBatches: ", len(x),numBatches)
+    for i in range(numBatches):
+        print("i :",i)
+        start = i * batchSize
+        end = start + batchSize
+        batchX = np.array(x[start: end], dtype="int64")
+        batchY = np.array(y[start: end], dtype="float32")
+
+        yield batchX, batchY
 # 构建模型
 class BiLSTM(object):
     """
@@ -306,10 +333,12 @@ class BiLSTM(object):
                     # 采用动态rnn，可以动态的输入序列的长度，若没有输入，则取序列的全长
                     # outputs是一个元祖(output_fw, output_bw)，其中两个元素的维度都是[batch_size, max_time, hidden_size],fw和bw的hidden_size一样
                     # self.current_state 是最终的状态，二元组(state_fw, state_bw)，state_fw=[batch_size, s]，s是一个元祖(h, c)
+
+
                     outputs, self.current_state = tf.nn.bidirectional_dynamic_rnn(lstmFwCell, lstmBwCell,
                                                                                   self.embeddedWords, dtype=tf.float32,
                                                                                   scope="bi-lstm" + str(idx))
-
+                    #outputs, self.current_state = keras.layers.Bidirectional(keras.layers.RNN(lstmFwCell,lstmBwCell))
                     # 对outputs中的fw和bw的结果拼接 [batch_size, time_step, hidden_size * 2]
                     self.embeddedWords = tf.concat(outputs, 2)
 
@@ -353,6 +382,9 @@ def genMetrics(trueY, predY, binaryPredY):
     precision = precision_score(trueY, binaryPredY)
     recall = recall_score(trueY, binaryPredY)
 
+    """
+        round() 方法返回浮点数x的四舍五入值。4表示保留4位小数
+    """
     return round(accuracy, 4), round(auc, 4), round(precision, 4), round(recall, 4)
 
 
@@ -367,6 +399,9 @@ evalLabels = data.evalLabels
 # inference data { data label}
 inferenceReviews = data.inferenceReviews
 inferenceLabels = data.inferenceLabels
+
+#print("inferenceReviews...",inferenceReviews)
+#print("inferenceLabels...", inferenceLabels)
 
 wordEmbedding = data.wordEmbedding
 
@@ -383,6 +418,8 @@ with tf.Graph().as_default():
         lstm = BiLSTM(config, wordEmbedding)
 
         globalStep = tf.Variable(0, name="globalStep", trainable=False)
+        #记录每个epoch下的损失
+        globalStep1 = tf.Variable(0, name="globalStep1", trainLabel=False)
         # 定义优化函数，传入学习速率参数
         optimizer = tf.train.AdamOptimizer(config.training.learningRate)
         # 计算梯度,得到梯度和变量
@@ -431,6 +468,7 @@ with tf.Graph().as_default():
                 feed_dict)
             timeStr = datetime.datetime.now().isoformat()
             acc, auc, precision, recall = genMetrics(batchY, predictions, binaryPreds)
+            print("trainning data")
             print("{}, step: {}, loss: {}, acc: {}, auc: {}, precision: {}, recall: {}".format(timeStr, step, loss, acc,
                                                                                                auc, precision, recall))
             trainSummaryWriter.add_summary(summary, step)
@@ -455,11 +493,10 @@ with tf.Graph().as_default():
 
             return loss, acc, auc, precision, recall
 
-
+        '''
+        预测函数
+        '''
         def devStep_yu(batchX, batchY):
-            """
-            验证函数
-            """
             feed_dict = {
                 lstm.inputX: batchX,
                 lstm.inputY: batchY,
@@ -468,22 +505,19 @@ with tf.Graph().as_default():
             summary, step, loss, predictions, binaryPreds = sess.run(
                 [summaryOp, globalStep, lstm.loss, lstm.predictions, lstm.binaryPreds],
                 feed_dict)
+
             print("预测值：", predictions)
             print("二分类预测值：", binaryPreds)
             print("实际值：", batchY)
-            # acc, auc, precision, recall = genMetrics(batchY, predictions, binaryPreds)
-            #
-            # evalSummaryWriter.add_summary(summary, step)
-            #
-            # return loss, acc, auc, precision, recall
+
 
         for i in range(config.training.epoches):
             # 训练模型
             print("start training model")
             for batchTrain in nextBatch(trainReviews, trainLabels, config.batchSize):
                 trainStep(batchTrain[0], batchTrain[1])
-
                 currentStep = tf.train.global_step(sess, globalStep)
+
                 if currentStep % config.training.evaluateEvery == 0:
                     print("\nEvaluation:")
 
@@ -501,25 +535,25 @@ with tf.Graph().as_default():
                         precisions.append(precision)
                         recalls.append(recall)
 
-                    # inference
-                    print("inference....")
-                    for batchEval in nextBatch(inferenceReviews, inferenceLabels, config.batchSize):
-                        print(devStep_yu(batchEval[0], batchEval[1]))
-
                     time_str = datetime.datetime.now().isoformat()
-                    # print("{}, step: {}, loss: {}, acc: {}, auc: {}, precision: {}, recall: {}".format(time_str,
-                    #                                                                                    currentStep,
-                    #                                                                                    mean(losses),
-                    #                                                                                    mean(accs),
-                    #                                                                                    mean(aucs),
-                    #                                                                                    mean(precisions),
-                    #                                                                                    mean(recalls)))
+                    print("{}, step: {}, loss: {}, acc: {}, auc: {}, precision: {}, recall: {}".format(time_str,
+                                                                                                       currentStep,
+                                                                                                       mean(losses),
+                                                                                                       mean(accs),
+                                                                                                       mean(aucs),
+                                                                                                       mean(precisions),
+                                                                                                       mean(recalls)))
+
+
 
                 if currentStep % config.training.checkpointEvery == 0:
                     # 保存模型的另一种方法，保存checkpoint文件
                     path = saver.save(sess, "model/Bi-LSTM/model/mymodel", global_step=currentStep)
                     print("Saved model checkpoint to {}\n".format(path))
 
+        print("inference....")
+        for batchEval in norandomnextBatch(inferenceReviews, inferenceLabels, config.testSize):
+            print(devStep_yu(batchEval[0], batchEval[1]))
         inputs = {"inputX": tf.saved_model.utils.build_tensor_info(lstm.inputX),
                   "keepProb": tf.saved_model.utils.build_tensor_info(lstm.dropoutKeepProb)}
 

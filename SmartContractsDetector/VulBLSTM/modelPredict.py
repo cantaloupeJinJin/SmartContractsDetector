@@ -24,30 +24,28 @@ from sklearn.metrics import roc_auc_score, accuracy_score, precision_score, reca
 warnings.filterwarnings("ignore")
 import warnings
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
-#from BiLSTM import Dataset,TrainingConfig,ModelConfig,Config,BiLSTM
-# sequenceLength = 600
-# wordToIndex = {}
-# '''
-# 获取评论
-# '''
-# filePath = "preprocess/test1.csv"
-# df = pd.read_csv(filePath)
-# review = df["review"].to_list()
-
-#
-# reviewVec = Dataset._reviewProcess(review, sequenceLength, wordToIndex)
-#model/Bi-LSTM/modelpb/saved_model.pb
+#import tensorflow as tf
 from tensorflow.python.platform import gfile
 pb_file_path = "model/Bi-LSTM/modelpb/saved_model.pb"
+#pb_file_path = "model/Bi-LSTM/modelpb/frozen_inference_graph"
 def restore_mode_pb(pb_file_path):
     sess = tf.Session()
+
     with gfile.FastGFile(pb_file_path, 'rb') as f:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
         sess.graph.as_default()
         tf.import_graph_def(graph_def, name='')
 
-    # print(sess.run('inputX:0'))
+    print(sess.run('b:0'))
 
-if __name__ == '__main__':
+    input_x = sess.graph.get_tensor_by_name('x:0')
+    input_y = sess.graph.get_tensor_by_name('y:0')
+
+    op = sess.graph.get_tensor_by_name('op_to_store:0')
+
+    ret = sess.run(op, {input_x: 5, input_y: 5})
+    print(ret)
+
+if __name__ == "__main__":
     restore_mode_pb(pb_file_path)
