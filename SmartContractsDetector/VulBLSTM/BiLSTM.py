@@ -28,8 +28,8 @@ warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 # 配置参数
 
 class TrainingConfig(object):
-    epoches = 1
-    evaluateEvery = 1
+    epoches = 25
+    evaluateEvery = 10
 
     checkpointEvery = 100
     #learningRate = 0.001
@@ -39,16 +39,18 @@ class TrainingConfig(object):
 class ModelConfig(object):
     embeddingSize = 200
 
-    hiddenSizes = [128, 128]  # 双层LSTM结构的神经元个数
+    hiddenSizes = [128, 128]  # 双层LSTM结构的神经元个数128
 
     dropoutKeepProb = 0.5
     l2RegLambda = 0.0
 
 
 class Config(object):
-    sequenceLength = 900  # 取了所有序列长度的均值
+    sequenceLength = 600
+    # 取了所有序列长度的均值
     #batchSize = 128
-    batchSize = 32
+    batchSize = 64
+    evalbatchSize = 128
     #测试集代码条数
     testSize = 50
     dataSource = "preprocess/labeledTrain.csv"
@@ -418,8 +420,6 @@ with tf.Graph().as_default():
         lstm = BiLSTM(config, wordEmbedding)
 
         globalStep = tf.Variable(0, name="globalStep", trainable=False)
-        #记录每个epoch下的损失
-        globalStep1 = tf.Variable(0, name="globalStep1", trainLabel=False)
         # 定义优化函数，传入学习速率参数
         optimizer = tf.train.AdamOptimizer(config.training.learningRate)
         # 计算梯度,得到梯度和变量
@@ -527,7 +527,7 @@ with tf.Graph().as_default():
                     precisions = []
                     recalls = []
 
-                    for batchEval in nextBatch(evalReviews, evalLabels, config.batchSize):
+                    for batchEval in nextBatch(evalReviews, evalLabels, config.evalbatchSize):
                         loss, acc, auc, precision, recall = devStep(batchEval[0], batchEval[1])
                         losses.append(loss)
                         accs.append(acc)
