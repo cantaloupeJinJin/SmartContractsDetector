@@ -28,8 +28,8 @@ warnings.filterwarnings("ignore")
 # 配置参数
 
 class TrainingConfig(object):
-    epoches = 98
-    evaluateEvery = 100
+    epoches = 100
+    evaluateEvery = 4
     checkpointEvery = 100
     learningRate = 0.001
 
@@ -44,11 +44,14 @@ class ModelConfig(object):
 
 
 class Config(object):
-    sequenceLength = 400  # 取了所有序列长度的均值
-    batchSize = 20
+    sequenceLength = 800
 
+    # 取了所有序列长度的均值
+    batchSize = 110
+    evalbatchSize = 110
+    testSize = 34
     dataSource = "preProcess/labeledTrain.csv"
-
+    testSource = "preprocess/test1.csv"
     stopWordSource = "rawData/english"
 
     numClasses = 2
@@ -69,6 +72,8 @@ config = Config()
 class Dataset(object):
     def __init__(self, config):
         self._dataSource = config.dataSource
+        #测试集进行预测
+        self._testSource = config.testSource
         self._stopWordSource = config.stopWordSource
 
         self._sequenceLength = config.sequenceLength  # 每条输入的序列处理为定长
@@ -222,17 +227,25 @@ class Dataset(object):
 
         # 初始化数据集
         reviews, labels = self._readData(self._dataSource)
-
+        #初始化测试集
+        reviews1, labels1 = self._readData(self._testSource)
         # 初始化词汇-索引映射表和词向量矩阵
         self._genVocabulary(reviews)
 
         # 初始化训练集和测试集
         trainReviews, trainLabels, evalReviews, evalLabels = self._genTrainEvalData(reviews, labels, self._rate)
+        trainReviews1, trainLabels1, evalReviews1, evalLabels1 = self._genTrainEvalData(reviews1, labels1, 1)
+
         self.trainReviews = trainReviews
         self.trainLabels = trainLabels
 
         self.evalReviews = evalReviews
         self.evalLabels = evalLabels
+
+        # inference data { data label}
+
+        self.inferenceReviews = trainReviews1
+        self.inferenceLabels = trainLabels1
 
 
 data = Dataset(config)
@@ -261,7 +274,25 @@ def nextBatch(x, y, batchSize):
 
         yield batchX, batchY
 
+def norandomnextBatch(x, y, batchSize):
+    """
+    生成batch数据集，用生成器的方式输出
+    """
 
+    perm = np.arange(len(x))
+    x = x[perm]
+    y = y[perm]
+
+    numBatches = len(x) // batchSize
+    print("len(x), numBatches: ", len(x),numBatches)
+    for i in range(numBatches):
+        print("i :",i)
+        start = i * batchSize
+        end = start + batchSize
+        batchX = np.array(x[start: end], dtype="int64")
+        batchY = np.array(y[start: end], dtype="float32")
+
+        yield batchX, batchY
 # 构建模型
 class BiLSTMAttention(object):
     """
@@ -399,6 +430,9 @@ trainReviews = data.trainReviews
 trainLabels = data.trainLabels
 evalReviews = data.evalReviews
 evalLabels = data.evalLabels
+# inference data { data label}
+inferenceReviews = data.inferenceReviews
+inferenceLabels = data.inferenceLabels
 
 wordEmbedding = data.wordEmbedding
 
@@ -445,7 +479,7 @@ with tf.Graph().as_default():
         saver = tf.train.Saver(tf.global_variables(), max_to_keep=5)
 
         # 保存模型的一种方式，保存为pb文件
-        builder = tf.saved_model.builder.SavedModelBuilder("model/BLSTMattention/savedModel")
+        builder = tf.saved_model.builder.SavedModelBuilder("model/BLSTMattention/modelpb")
         sess.run(tf.global_variables_initializer())
 
 
@@ -488,6 +522,23 @@ with tf.Graph().as_default():
             return loss, acc, auc, precision, recall
 
 
+        '''
+        预测函数
+        '''
+        def devStep_yu(batchX, batchY):
+            feed_dict = {
+                lstm.inputX: batchX,
+                lstm.inputY: batchY,
+                lstm.dropoutKeepProb: 1.0
+            }
+            summary, step, loss, predictions, binaryPreds = sess.run(
+                [summaryOp, globalStep, lstm.loss, lstm.predictions, lstm.binaryPreds],
+                feed_dict)
+
+            print("预测值：", predictions)
+            print("二分类预测值：", binaryPreds)
+            print("实际值：", batchY)
+
         for i in range(config.training.epoches):
             # 训练模型
             print("start training model")
@@ -504,7 +555,7 @@ with tf.Graph().as_default():
                     precisions = []
                     recalls = []
 
-                    for batchEval in nextBatch(evalReviews, evalLabels, config.batchSize):
+                    for batchEval in nextBatch(evalReviews, evalLabels, config.evalbatchSize):
                         loss, acc, auc, precision, recall = devStep(batchEval[0], batchEval[1])
                         losses.append(loss)
                         accs.append(acc)
@@ -525,6 +576,10 @@ with tf.Graph().as_default():
                     # 保存模型的另一种方法，保存checkpoint文件
                     path = saver.save(sess, "model/BLSTMattention/model/mymodel", global_step=currentStep)
                     print("Saved model checkpoint to {}\n".format(path))
+
+        print("inference....")
+        for batchEval in norandomnextBatch(inferenceReviews, inferenceLabels, config.testSize):
+            print(devStep_yu(batchEval[0], batchEval[1]))
 
         inputs = {"inputX": tf.saved_model.utils.build_tensor_info(lstm.inputX),
                   "keepProb": tf.saved_model.utils.build_tensor_info(lstm.dropoutKeepProb)}

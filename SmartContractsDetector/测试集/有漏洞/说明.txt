@@ -1,0 +1,3 @@
+选取该网址下：
+https://github.com/sec-bit/awesome-buggy-erc20-tokens/blob/master/bad_tokens.all.csv
+4381-4419

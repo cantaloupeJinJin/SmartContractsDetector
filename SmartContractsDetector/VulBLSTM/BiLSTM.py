@@ -28,8 +28,10 @@ warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 # 配置参数
 
 class TrainingConfig(object):
-    epoches = 25
-    evaluateEvery = 10
+    np.random.seed(4)
+    epoches = 100
+
+    evaluateEvery = 4
 
     checkpointEvery = 100
     #learningRate = 0.001
@@ -49,10 +51,10 @@ class Config(object):
     sequenceLength = 600
     # 取了所有序列长度的均值
     #batchSize = 128
-    batchSize = 64
-    evalbatchSize = 128
+    batchSize = 110
+    evalbatchSize = 110
     #测试集代码条数
-    testSize = 50
+    testSize = 34
     dataSource = "preprocess/labeledTrain.csv"
     testSource = "preprocess/test1.csv"
     stopWordSource = "rawData/english"
@@ -142,7 +144,7 @@ class Dataset(object):
         for i in range(len(x)):
             reviewVec = self._reviewProcess(x[i], self._sequenceLength, self._wordToIndex)
             reviews.append(reviewVec)
-
+            # print("reviewVec: ", reviewVec)
             labels.append([y[i]])
 
         trainIndex = int(len(x) * rate)

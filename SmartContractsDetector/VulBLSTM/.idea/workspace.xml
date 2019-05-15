@@ -11,68 +11,29 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/VulBLSTM$pretreatment.coverage" NAME="pretreatment Coverage Results" MODIFIED="1555304133743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VulBLSTM$word2vecs.coverage" NAME="word2vecs Coverage Results" MODIFIED="1557055375070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VulBLSTM$test.coverage" NAME="test Coverage Results" MODIFIED="1557062015225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VulBLSTM$modelPredict.coverage" NAME="modelPredict Coverage Results" MODIFIED="1556202968961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VulBLSTM$txt2tsv.coverage" NAME="txt2tsv Coverage Results" MODIFIED="1555304020947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VulBLSTM$RCNN.coverage" NAME="RCNN Coverage Results" MODIFIED="1555899551129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VulBLSTM$BLSTMattention.coverage" NAME="BLSTMattention Coverage Results" MODIFIED="1555898377296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VulBLSTM$BiLSTM.coverage" NAME="BiLSTM Coverage Results" MODIFIED="1557105650537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$expanddata.coverage" NAME="expanddata Coverage Results" MODIFIED="1557470607292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$test.coverage" NAME="test Coverage Results" MODIFIED="1557062015225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$word2vecs.coverage" NAME="word2vecs Coverage Results" MODIFIED="1557839669902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$modelPredict.coverage" NAME="modelPredict Coverage Results" MODIFIED="1557881396062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$BLSTMattention.coverage" NAME="BLSTMattention Coverage Results" MODIFIED="1557813869141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$expanddatabytxt.coverage" NAME="expanddatabytxt Coverage Results" MODIFIED="1557471518762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$BiLSTM.coverage" NAME="BiLSTM Coverage Results" MODIFIED="1557839743846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VulBLSTM$textCNN.coverage" NAME="textCNN Coverage Results" MODIFIED="1555897374185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/VulBLSTM$calculatenum.coverage" NAME="calculatenum Coverage Results" MODIFIED="1557065289404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$predict.coverage" NAME="predict Coverage Results" MODIFIED="1557885948151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VulBLSTM$calculatenum.coverage" NAME="calculatenum Coverage Results" MODIFIED="1557194131803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BiLSTM.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BiLSTM.py">
+    <leaf>
+      <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12138">
-              <caret line="529" column="79" selection-start-line="529" selection-start-column="79" selection-end-line="529" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calculatenum.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calculatenum.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="labeledTrain2.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain2.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="4675">
-              <caret line="187" column="11" selection-start-line="187" selection-end-line="188" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="word2vecs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/word2vecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test1.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preprocess/test1.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="32" selection-end-line="245" />
+            <state relative-caret-position="2081">
+              <caret line="439" column="51" lean-forward="true" selection-start-line="439" selection-start-column="51" selection-end-line="439" selection-end-column="51" />
+              <folding>
+                <element signature="e#119#128#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,15 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>numBatches</find>
-      <find>words</find>
-      <find>name</find>
-      <find>inputX</find>
-      <find>strip</find>
-      <find>dataSource</find>
-      <find>Evaluation</find>
-      <find>time_str</find>
-      <find>inference</find>
       <find>summaryOp</find>
       <find>ev</find>
       <find>预测值</find>
@@ -114,10 +66,19 @@
       <find>evalSummaryWriter</find>
       <find>step</find>
       <find>trainOp</find>
-      <find>&quot;</find>
       <find>random</find>
       <find>write</find>
       <find>filepath</find>
+      <find>0,</find>
+      <find>1,</find>
+      <find>&quot;</find>
+      <find>w</find>
+      <find>reviewVec</find>
+      <find>placeholder</find>
+      <find>sigmoid</find>
+      <find>tensor</find>
+      <find>dataGen.</find>
+      <find>norandomnextBatch</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -132,19 +93,23 @@
         <option value="$PROJECT_DIR$/data/indexToWord.json" />
         <option value="$PROJECT_DIR$/data/wordToIndex.json" />
         <option value="$PROJECT_DIR$/textCNN.py" />
-        <option value="$PROJECT_DIR$/BLSTMattention.py" />
         <option value="$PROJECT_DIR$/RCNN.py" />
-        <option value="$PROJECT_DIR$/modelPredict.py" />
         <option value="$PROJECT_DIR$/generatorcode.py" />
         <option value="$PROJECT_DIR$/preprocess/ERC20.csv" />
-        <option value="$PROJECT_DIR$/word2vecs.py" />
-        <option value="$PROJECT_DIR$/preprocess/test1.csv" />
-        <option value="$PROJECT_DIR$/rawData/wordEmbdiing.txt" />
-        <option value="$PROJECT_DIR$/preprocess/labeledTrain.csv" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/preprocess/labeledTrain2.csv" />
         <option value="$PROJECT_DIR$/calculatenum.py" />
+        <option value="$PROJECT_DIR$/preprocess/test1.csv" />
+        <option value="$PROJECT_DIR$/rawData/data2.txt" />
+        <option value="$PROJECT_DIR$/expanddata.py" />
+        <option value="$PROJECT_DIR$/expanddatabytxt.py" />
+        <option value="$PROJECT_DIR$/preprocess/labeledTrain.csv" />
+        <option value="$PROJECT_DIR$/rawData/wordEmbdiing.txt" />
+        <option value="$PROJECT_DIR$/BLSTMattention.py" />
+        <option value="$PROJECT_DIR$/word2vecs.py" />
+        <option value="$PROJECT_DIR$/modelPredict.py" />
         <option value="$PROJECT_DIR$/BiLSTM.py" />
+        <option value="$PROJECT_DIR$/predict.py" />
       </list>
     </option>
   </component>
@@ -158,17 +123,27 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="70" />
-    <option name="y" value="-10" />
-    <option name="width" value="1860" />
-    <option name="height" value="1100" />
+    <option name="x" value="1940" />
+    <option name="y" value="3" />
+    <option name="width" value="1488" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="VulBLSTM" type="cbb8eebc:String" user="VulBLSTM" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +155,17 @@
               <item name="VulBLSTM" type="b2602c69:ProjectViewProjectNode" />
               <item name="VulBLSTM" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VulBLSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VulBLSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="differentmodels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VulBLSTM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VulBLSTM" type="462c0819:PsiDirectoryNode" />
+              <item name="differentmodels" type="462c0819:PsiDirectoryNode" />
+              <item name="600model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VulBLSTM" type="b2602c69:ProjectViewProjectNode" />
@@ -216,6 +202,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\gitrepositories\SmartContractsDetector\SmartContractsDetector\VulBLSTM\differentmodels" />
+      <recent name="F:\gitrepositories\SmartContractsDetector\SmartContractsDetector\VulBLSTM\rawData" />
       <recent name="F:\pyexercise\VulBLSTM\preprocess" />
       <recent name="F:\pyexercise\VulBLSTM\rawData" />
       <recent name="F:\pyexercise\VulBLSTM" />
@@ -233,7 +221,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.BiLSTM">
+  <component name="RunManager" selected="Python.predict">
+    <configuration name="BLSTMattention" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VulBLSTM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BLSTMattention.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="BiLSTM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VulBLSTM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,25 +255,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BiLSTM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="calculatenum" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="VulBLSTM" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculatenum.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,7 +279,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VulBLSTM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -304,7 +292,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -332,17 +320,17 @@
     <list>
       <item itemvalue="Python.word2vecs" />
       <item itemvalue="Python.BiLSTM" />
+      <item itemvalue="Python.BLSTMattention" />
       <item itemvalue="Python.modelPredict" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.calculatenum" />
+      <item itemvalue="Python.predict" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.BiLSTM" />
-        <item itemvalue="Python.calculatenum" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.word2vecs" />
+        <item itemvalue="Python.predict" />
         <item itemvalue="Python.modelPredict" />
+        <item itemvalue="Python.BiLSTM" />
+        <item itemvalue="Python.word2vecs" />
+        <item itemvalue="Python.BLSTMattention" />
       </list>
     </recent_temporary>
   </component>
@@ -360,27 +348,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="-7" width="1486" height="878" extended-state="6" />
+    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36316472" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.33870968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3714927" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15285327" />
+      <window_info content_ui="combo" x="1937" y="110" width="260" height="891" id="Project" order="0" sideWeight="0.49943882" visible="true" weight="0.14453125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" auto_hide="true" x="2523" y="470" width="74" height="44" id="SciView" order="4" show_stripe_button="false" type="FLOATING" />
+      <window_info id="Structure" order="1" sideWeight="0.5005612" side_tool="true" weight="0.203125" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994812" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="274" height="800" id="Documentation" side_tool="true" weight="0.34142396" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
@@ -396,22 +386,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/modelPredict.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/expanddata.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/expanddata.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test.py</url>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="22" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="graph_def" language="Python" />
-        <watch expression="batchX" language="Python" />
-        <watch expression="currentStep" language="Python" />
-        <watch expression="batchY" language="Python" />
-        <watch expression="step" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -443,77 +433,12 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pretreatment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.txt" />
-    <entry file="file://$PROJECT_DIR$/data.tsv" />
-    <entry file="file://$PROJECT_DIR$/txt2tsv.py" />
-    <entry file="file://$PROJECT_DIR$/rawData/english">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summarys/eval/events.out.tfevents.1555308883.LAPTOP-16ATM6O7" />
-    <entry file="file://$PROJECT_DIR$/rawData/labeledunVulTrainData.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="13" selection-end-line="7" selection-end-column="444" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rawData/labeledVulTrainData.tsv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Bi-LSTM/modelpb/variables/variables.index" />
-    <entry file="file://$PROJECT_DIR$/summarys/train/events.out.tfevents.1555338314.LAPTOP-16ATM6O7" />
-    <entry file="file://$PROJECT_DIR$/model/Bi-LSTM/modelpb/variables/variables.data-00000-of-00001" />
-    <entry file="file://$PROJECT_DIR$/rawData/word2Vec.bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/textCNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BLSTMattention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RCNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="369" selection-start-line="369" selection-end-line="369" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/saved_model/builder_impl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/wordToIndex.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1540969729/google/protobuf/pyext/_message.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -529,25 +454,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelPredict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <element signature="e#125#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54375">
           <caret line="2201" column="4" selection-start-line="2201" selection-start-column="4" selection-end-line="2201" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generatorcode.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/variable_scope.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -556,7 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rawData/word2Vec.vector" />
     <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/summary/summary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6150">
@@ -578,13 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7975">
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/gensim/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -598,9 +502,6 @@
           <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/indexToWord.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/ops/gen_math_ops.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -616,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/sklearn/metrics/ranking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-427">
-          <caret line="243" column="4" selection-start-line="243" selection-start-column="4" selection-end-line="243" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1540969729/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
@@ -634,27 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="110" column="38" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pretreatment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rawData/wordEmbdiing.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50361">
-          <caret line="1049" lean-forward="true" selection-start-line="1049" selection-end-line="1049" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/word2vecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -684,6 +557,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/pandas/io/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="598" column="12" selection-start-line="598" selection-start-column="12" selection-end-line="598" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/preprocess/write_test.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
@@ -693,23 +573,12 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/pandas/io/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="598" column="12" selection-start-line="598" selection-start-column="12" selection-end-line="598" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain.csv">
+    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain2.csv" />
+    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain1.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="false" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
           <column index="1" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="4734">
-          <caret line="1049" selection-start-line="1049" selection-end-line="1049" />
         </state>
       </provider>
       <provider editor-type-id="text-editor">
@@ -717,36 +586,178 @@
           <caret line="31" lean-forward="true" selection-start-line="1" selection-end-line="31" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-509">
+          <caret line="525" column="464" selection-start-line="525" selection-start-column="464" selection-end-line="525" selection-end-column="464" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/pandas/core/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="1095" column="8" selection-start-line="1095" selection-start-column="8" selection-end-line="1095" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="320" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/imblearn/over_sampling/_smote.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="715" column="8" selection-start-line="715" selection-start-column="8" selection-end-line="715" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/imblearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rawData/data2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="152" selection-start-line="34" selection-start-column="152" selection-end-line="34" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rawData/word2Vec.vector" />
+    <entry file="file://$PROJECT_DIR$/data/wordToIndex.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/indexToWord.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RCNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="369" selection-start-line="369" selection-end-line="369" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rawData/wordEmbdiing.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="239725">
+          <caret line="1343" selection-start-line="1343" selection-end-line="1343" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocess/test1.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="32" selection-end-line="245" />
-        </state>
       </provider>
       <provider editor-type-id="text-editor">
         <state>
           <caret selection-end-column="16" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="16" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain2.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain3.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="4675">
-          <caret line="187" column="11" selection-start-line="187" selection-end-line="188" />
+        <state relative-caret-position="-712">
+          <caret line="601" column="39" selection-start-line="601" selection-start-column="39" selection-end-line="601" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain1.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="14450">
+          <caret line="578" column="49" selection-start-line="578" selection-start-column="49" selection-end-line="578" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BLSTMattention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocess/labeledTrain.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="421">
+          <caret line="582" column="29" selection-end-line="582" selection-end-column="1594" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Bi-LSTM/model/checkpoint">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/differentmodels/600model/mymodel-300.data-00000-of-00001">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275">
+          <caret line="4" column="129" lean-forward="true" selection-start-line="4" selection-start-column="129" selection-end-line="4" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expanddatabytxt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5704">
+          <caret line="766" column="6" selection-start-line="766" selection-start-column="6" selection-end-line="766" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelPredict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="424" lean-forward="true" selection-start-line="29" selection-end-line="428" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/tensorflow/Lib/site-packages/sklearn/metrics/ranking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="243" column="4" selection-start-line="243" selection-start-column="4" selection-end-line="243" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatorcode.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expanddata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#123#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pretreatment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -757,10 +768,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/word2vecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BiLSTM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12138">
-          <caret line="529" column="79" selection-start-line="529" selection-start-column="79" selection-end-line="529" selection-end-column="79" />
+        <state relative-caret-position="200">
+          <caret line="511" column="40" selection-start-line="511" selection-start-column="29" selection-end-line="511" selection-end-column="40" />
+          <folding>
+            <element signature="e#119#128#0" expanded="true" />
+            <element signature="e#617#753#0" />
+            <element signature="e#787#906#0" />
+            <element signature="e#935#1301#0" />
+            <element signature="e#6781#7244#0" />
+            <element signature="e#7290#7740#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2081">
+          <caret line="439" column="51" lean-forward="true" selection-start-line="439" selection-start-column="51" selection-end-line="439" selection-end-column="51" />
+          <folding>
+            <element signature="e#119#128#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
